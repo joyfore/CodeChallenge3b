@@ -15,7 +15,7 @@ class CodeChallenge3 {
         // HINT: initialize score before asking input from the user.
 
         // Get their answer by using input scanner.
-        Scanner scanner = new Scanner(System.in);
+
 
     /*
     Grade  Test Score
@@ -29,13 +29,16 @@ class CodeChallenge3 {
     Print the grade based on the score entered by user. Use
     ELSE IF STATEMENT for multiple conditions with LOGICAL OPERATORS.
     */
-        System.out.println("Your score must be between 0 to 100.");
+//        System.out.println("Your score must be between 0 to 100.");
+        int score = 0;
+        Scanner scanner = new Scanner(System.in);
+        // Ask user question
 
-        // Ask user question.
-        System.out.println("what is your score " +  "?");
-
-        int score = scanner.nextInt(); // Get their answer by using input scanner.
-        while (score >= 0 && score <= 100){
+// Get their answer by using input scanner.
+        //while (score >= 0 && score <= 100){
+        while (score <= 0 || score >= 100) {
+            System.out.println("your score: ");
+            score = scanner.nextInt();
 
             if (score >= 0 && score <= 59) {
                 System.out.println("you got an F, try harder next time");
@@ -53,7 +56,7 @@ class CodeChallenge3 {
                 System.out.println("you got an B, Great job, keep on working hard");
                 break;
             }
-            else {
+            else if (score >= 90 && score <= 100 ){
                 System.out.println("you got an A! That's what I like ");
                 break;
             }
